@@ -8,9 +8,24 @@ body{
     display: flex;
     justify-content: center;
 }
+
+@keyframes example {
+    0% {color:black;left:0px;top:0px;}
+    25% {color:white;left:20px;top:10px;}
+    50% {color: blue;right:20px;top:20px;}
+    100% {color: red;left:0px;top:0px;}
+    }
+
 h1{
 font-size:52px;
 text-align: center;
+animation-name:example;
+animation-duration: 4s;
+animation-delay: 2s;
+animation-iteration-count:infinite;
+animation-direction:alternate-reverse;
+animation-timing-function: ease;
+position: relative;
 
 }
 .main{
@@ -36,12 +51,13 @@ margin-bottom: 150px;
     border: 10px solid white;
     border-radius: 1%;
     box-shadow: 3px 3px 5px 5px rgb(195, 228, 198);
+    transition:width 2s, box-shadow 2s,transform 2s;
 }
 .header img:hover{
     cursor: pointer;
     width:53%;
     box-shadow: 3px 3px 15px 15px rgb(28, 196, 42);
-    transition:width 2s, box-shadow 2s;
+    transform: rotate(2deg);
     transition-timing-function:ease-out;
 }
 .header>p{
@@ -72,3 +88,5 @@ margin-bottom: 150px;
    color: rgb(3, 3, 252);
    font-size: large;
 }
+
+
